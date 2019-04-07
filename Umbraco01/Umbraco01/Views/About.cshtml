@@ -1,0 +1,19 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.About>
+@using ContentModels = Umbraco.Web.PublishedModels;
+@{
+	Layout = "master.cshtml";
+}
+
+	<!-- Main -->
+			<section id="main" class="wrapper">
+				<div class="container">
+
+					<header class="major special">
+						<h2>@Model.Value("aboutTitle")</h2>
+					</header>
+					
+					@Model.Value("infoBody")
+				</div>
+			</section>
+
+@Html.GetGridHtml(Model,"sectionGrid")
